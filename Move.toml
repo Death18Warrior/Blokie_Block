@@ -1,0 +1,15 @@
+[package]
+name = "Blokie_Block"
+version = "1.0.0"
+authors = []
+
+[addresses]
+MyModule = "0x59658b56aca5862b43bf62acba9b145068cac3dc00006913a9bf5e7e2d1799de"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
