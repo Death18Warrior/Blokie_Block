@@ -9,7 +9,7 @@ module MyModule::IPProtection {
     }
 
     /// Function to register an invention on-chain.
-    public fun register_invention(owner: &signer, description: String) {
+    public entry fun register_invention(owner: &signer, description: String) {
         let invention = Invention {
             owner: signer::address_of(owner),
             description,
@@ -18,6 +18,7 @@ module MyModule::IPProtection {
     }
 
     /// Function to verify ownership of an invention.
+   #[view]
     public fun verify_ownership(inventor: address): address acquires Invention {
         let invention = borrow_global<Invention>(inventor);
         invention.owner
